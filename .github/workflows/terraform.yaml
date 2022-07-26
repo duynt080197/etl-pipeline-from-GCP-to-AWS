@@ -8,7 +8,7 @@ jobs:
     name: 'Terraform'
     runs-on: ubuntu-latest
     steps:
-       - name: Terraform Init
+      - name: Terraform Init
         id: init
         run: terraform init
       - name: 'Checkout'
