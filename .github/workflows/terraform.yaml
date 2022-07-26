@@ -18,3 +18,7 @@ jobs:
           tf_actions_subcommand: "init"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Terraform Init
+        id: init
+        run: terraform init
