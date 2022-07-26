@@ -1,14 +1,15 @@
 name: 'Terraform GitHub Actions'
 on:
-  - pull_request
-  - push
+  push:
+    branches:
+      - 'master'
 jobs:
   terraform:
     name: 'Terraform'
     runs-on: ubuntu-latest
     steps:
       - name: 'Checkout'
-        uses: actions/checkout@master
+        uses: actions/checkout@v2
       - name: 'Terraform Format'
         uses: duynt080197/mentor@master
         with:
