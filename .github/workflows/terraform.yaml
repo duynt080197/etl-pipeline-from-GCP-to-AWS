@@ -2,12 +2,15 @@ name: 'Terraform GitHub Actions'
 on:
   push:
     branches:
-      - 'master'
+      - master
 jobs:
   terraform:
     name: 'Terraform'
     runs-on: ubuntu-latest
     steps:
+       - name: Terraform Init
+        id: init
+        run: terraform init
       - name: 'Checkout'
         uses: actions/checkout@v2
       - name: 'Terraform Format'
