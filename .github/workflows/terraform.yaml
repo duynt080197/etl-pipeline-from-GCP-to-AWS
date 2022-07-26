@@ -13,6 +13,6 @@ jobs:
         uses: duynt080197/mentor@master
         with:
           tf_actions_version: 0.12.18
-          tf_actions_subcommand: ['init','plan']
+          tf_actions_subcommand: 'init'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
